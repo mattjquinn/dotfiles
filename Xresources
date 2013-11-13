@@ -1,0 +1,8 @@
+UXTerm*faceName: Liberation Mono
+UXTerm*faceSize: 11
+UXTerm*dynamicColors: true
+UXterm*saveLines: 2048
+UXTerm*background: black
+UXTerm*foreground: white
+UXTerm*cursorColor: white
+
