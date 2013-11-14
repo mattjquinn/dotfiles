@@ -16,11 +16,9 @@ xrandr --output VGA1 --mode "\"$E228WFP_MODEID\""
 xrandr --output eDP1 --mode "\"$THINKPAD_MODEID\"" --right-of VGA1
 xrandr --output HDMI1 --mode "\"$E228WFP_MODEID\"" --right-of eDP1
 
-while xsetroot -name "`date`"
-do
-	sleep 1
-done &
-
 xbindkeys
 xrdb -merge ~/.Xresources
+
+DZEN2_FONT="-*-fixed-medium-r-*-*-12-*-*-*-*-*-*-*"
+(sleep 2s && conky | dzen2 -ta r -x '1080' -y '0' -e '' -h '20' -w '600' -fg '#66a9ba' -fn '$DZEN2_FONT' -p ) &
 exec dwm
