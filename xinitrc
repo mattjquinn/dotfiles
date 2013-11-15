@@ -66,9 +66,10 @@ if [ "$HDMI1_STATUS" = "connected" ]; then
 fi
 
 # Set background image.
-feh --bg-scale /home/mquinn/LA.jpg
+feh --bg-scale /home/mquinn/bg_photos/LA.jpg
 
 xbindkeys
 xrdb -merge ~/.Xresources
+(redshift) &
 
 exec dwm
