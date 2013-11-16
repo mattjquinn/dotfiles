@@ -5,34 +5,42 @@ update_interval 1
 if_up_strictness address
 
 TEXT
-^i(/home/mquinn/.dzen/cpu.xbm) ^fg(\#FFFFFF)${cpu}%  \
-^i(/home/mquinn/.dzen/mem.xbm) ^fg(\#FFFFFF)${memperc}%\
+# Upgrades Counter
+^fg(\#f479df)\
+${execi 3600 /home/mquinn/.dzen/updates_avail.sh -u}\
+${execi 60 /home/mquinn/.dzen/updates_avail.sh}\
+  \
+# Staged Counter
+^fg(\#c45bdc)${execi 10 /home/mquinn/.dzen/review_counter.sh}\
    \
-\
+# CPU / Mem
+^fg(\#a4a4a4)\
+^i(/home/mquinn/.dzen/icons/cpu.xbm) ${cpu}%  \
+^i(/home/mquinn/.dzen/icons/mem.xbm) ${memperc}%\
+   \
 # Ethernet
-^fg(\#ebac54)\
+^fg(\#49d82c)\
 ${if_up eth0}\
-^i(/home/mquinn/.dzen/net_wired.xbm)\
-^fg(\#00aa4a) ^i(/home/mquinn/.dzen/net_down_03.xbm)${downspeed eth0} ^fg(\#ff3333)\
-^i(/home/mquinn/.dzen/net_up_03.xbm)${upspeed eth0} ^fg(\#ebac54)\
+^i(/home/mquinn/.dzen/icons/net_wired.xbm)  ETHERNET\
 ${endif}\
 \
 \
 # Wireless
-^fg(\#ebac54)\
+^fg(\#49d82c)\
 ${if_up wlan0}\
-^i(/home/mquinn/.dzen/wifi_02.xbm) ${wireless_essid wlan0}\
-^fg(\#00aa4a) ^i(/home/mquinn/.dzen/net_down_03.xbm)${downspeed wlan0} ^fg(\#ff3333)\
-^i(/home/mquinn/.dzen/net_up_03.xbm)${upspeed wlan0} ^fg(\#ebac54)\
+^i(/home/mquinn/.dzen/icons/wifi_02.xbm)  ${wireless_essid wlan0}\
 ${endif}\
 \
 \
 # Battery
+^fg(\#d82c99)\
   ${battery_short}  \
 \
 # Volume
-^i(/home/mquinn/.dzen/spkr_02.xbm) ^fg(\#00ffff) \
+^fg(\#a792e0)\
+^i(/home/mquinn/.dzen/icons/spkr_02.xbm) \
 ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}% ^fg(\#ebac54) \
 \
 # Date and Time
-^i(/home/mquinn/.dzen/shroom.xbm) ^fg(\#FFFFFF) ${time %b %d} ^fg(\#ebac54) ${time %R %Z} \
+^fg(\#bcbcbc)\
+^i(/home/mquinn/.dzen/icons/shroom.xbm) ${time %b %d} ${time %R %Z} \
