@@ -5,9 +5,12 @@ update_interval 1
 if_up_strictness address
 
 TEXT
+# Backup Notifier
+^fg(\#eb012c)\
+${execi 10 /home/mquinn/.dzen/check_for_backup.sh}\
+  \
 # Upgrades Counter
 ^fg(\#f479df)\
-${execi 3600 /home/mquinn/.dzen/updates_avail.sh -u}\
 ${execi 60 /home/mquinn/.dzen/updates_avail.sh}\
   \
 # Staged Counter
