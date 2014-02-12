@@ -25,7 +25,7 @@ ${execi 60 /home/mquinn/.dzen/updates_avail.sh}\
 # Ethernet
 ^fg(\#49d82c)\
 ${if_up eth0}\
-^i(/home/mquinn/.dzen/icons/net_wired.xbm)  ETHERNET\
+^i(/home/mquinn/.dzen/icons/net_wired.xbm)  eth0\
 ${endif}\
 \
 \
