@@ -73,4 +73,9 @@ xbindkeys
 xrdb -merge ~/.Xresources
 (redshift) &
 
-exec dwm
+while true
+	do
+	sleep 2
+	(exec dwm) &
+done
+
