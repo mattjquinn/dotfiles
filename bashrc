@@ -109,9 +109,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# MQUINN 11-23-2013
+# MQUINN 11-23-2013; on 02-20-2014, I'm disabling this
+# to instead have bash_profile source from bash_rc for tmux's sake.
 # Source from ~/.bash_profile
-if [ -f ~/.bash_profile ]; then
-	source ~/.bash_profile
-fi
+#if [ -f ~/.bash_profile ]; then
+#	source ~/.bash_profile
+#fi
 
