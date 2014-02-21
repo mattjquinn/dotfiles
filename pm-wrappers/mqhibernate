@@ -1,0 +1,4 @@
+#!/bin/bash
+(xtrlock) &
+sleep 1
+sudo /usr/sbin/pm-hibernate
