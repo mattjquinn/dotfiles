@@ -10,9 +10,10 @@ alias ssh-ora="ssh -p8888 oracle@oracle"
 
 alias ssh-hadoop1="ssh -p1414 hduser@192.168.0.100"
 
-# MQUINN 02-20-2013 : tmux only sources .bash_profile; ensure
+# MQUINN 02-20-2014 : tmux only sources .bash_profile; ensure
 # settings in .bashrc are also applied.
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
+alias mqlock="xtrlock"

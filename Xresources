@@ -13,10 +13,14 @@ UXTerm*color5:             Magenta
 UXTerm*color6:             Cyan
 UXTerm*color7:             White
 UXTerm*colorBD:            White
-UXTerm*colorBDMode:        true
 UXTerm*colorUL:            Yellow
 UXTerm*colorULMode:        true
 UXTerm*foreground:         White
 
 UXTerm*cursorColor: white
 UXTerm*cursorBlink: true
+
+## Required for use of bold in utilties like top(1).
+UXTerm*colorBDMode:        false
+UXTerm*boldMode:		   true
+
