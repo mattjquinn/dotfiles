@@ -67,7 +67,7 @@ fi
 
 # Set background image.
 # can use --bg-scale here.
-feh --bg-max /home/mquinn/bg_photos/NightHidesTurkanaTafreshi.jpg
+feh --bg-max /home/mquinn/bg_photos/auroraNZ_weir_2048.jpg
 
 xbindkeys
 xrdb -merge ~/.Xresources
