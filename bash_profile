@@ -13,6 +13,9 @@ alias ssh-hadoop2="ssh -p1515 hduser@192.168.0.100"
 alias ssh-hadoop3="ssh -p1616 hduser@192.168.0.100"
 alias ssh-hadoop4="ssh -p1717 hduser@192.168.0.100"
 
+# MQUINN 04-04-2014 : Adding OpenVPN server for use from public Wifi points.
+alias ssh-vpn="ssh admin@10.8.0.1"
+
 # MQUINN 02-20-2014 : tmux only sources .bash_profile; ensure
 # settings in .bashrc are also applied.
 if [ -f ~/.bashrc ]; then
