@@ -7,8 +7,7 @@ if_up_strictness address
 TEXT
 # Backup Notifier
 ^fg(\#eb012c)\
-${execi 10 /home/mquinn/.dzen/check_for_backup.sh}\
-  \
+  ${execi 10 /home/mquinn/.dzen/check_for_backup.sh} \
 # Upgrades Counter
 ^fg(\#f479df)\
 ${execi 3600 /home/mquinn/.dzen/updates_avail.sh -u}\
@@ -35,6 +34,10 @@ ${if_up wlan0}\
 ^i(/home/mquinn/.dzen/icons/wifi_02.xbm)  ${wireless_essid wlan0}\
 ${endif}\
 \
+\
+# VPN Indicator
+^fg(\#f8fb29)\
+  ${execi 3 /home/mquinn/.dzen/check_for_vpn.sh}\
 \
 # Battery
 ^fg(\#d82c99)\
