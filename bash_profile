@@ -5,14 +5,12 @@ alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
 # MQUINN 12-12-2013 : Adding SSH aliases for Xen domUs.
 alias ssh-xen="ssh mquinn@xen"
-alias ssh-ops="ssh -p4 mquinn@ops"
-alias ssh-ora="ssh -p8888 oracle@oracle"
-alias ssh-nat="ssh ec2-user@vpcnat.enterrupt.com"
+alias ssh-xenops="ssh -p4 opsdev@ops"
+alias ssh-xenora="ssh -p8888 oracle@oracle"
 
-alias ssh-hadoop1="ssh -p1414 hduser@192.168.0.100"
-alias ssh-hadoop2="ssh -p1515 hduser@192.168.0.100"
-alias ssh-hadoop3="ssh -p1616 hduser@192.168.0.100"
-alias ssh-hadoop4="ssh -p1717 hduser@192.168.0.100"
+# MQUINN 05-25-2014 : Aliases for AWS instances
+alias ssh-awsnat="ssh ec2-user@vpcnat.enterrupt.com"
+alias ssh-awsops="ssh opsdev@ops.enterrupt.com"
 
 # MQUINN 04-04-2014 : Adding OpenVPN server for use from public Wifi points.
 alias ssh-vpn="ssh admin@10.8.0.1"
