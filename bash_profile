@@ -22,3 +22,6 @@ if [ -f ~/.bashrc ]; then
 fi
 
 alias mqlock="xtrlock"
+
+# Import functions for cb, a wrapper around xclip.
+source ~/dotfiles/bash/cb.sh
