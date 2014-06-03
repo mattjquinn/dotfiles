@@ -9,8 +9,8 @@ alias ssh-xenops="ssh -p4 opsdev@ops"
 alias ssh-xenora="ssh -p8888 oracle@oracle"
 
 # MQUINN 05-25-2014 : Aliases for AWS instances
-alias ssh-awsnat="ssh ec2-user@vpcnat.enterrupt.com"
-alias ssh-awsops="ssh opsdev@ops.enterrupt.com"
+alias ssh-awsnat="ssh ec2-user@vpcnat.openpplsoft.org"
+alias ssh-awsops="ssh opsdev@opshost.openpplsoft.org"
 
 # MQUINN 04-04-2014 : Adding OpenVPN server for use from public Wifi points.
 alias ssh-vpn="ssh admin@10.8.0.1"
