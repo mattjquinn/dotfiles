@@ -25,3 +25,6 @@ alias mqlock="xtrlock"
 
 # Import functions for cb, a wrapper around xclip.
 source ~/dotfiles/bash/cb.sh
+
+# Use nano for writing/editing Git commit messages.O
+export GIT_EDITOR=nano
