@@ -28,3 +28,13 @@ source ~/dotfiles/bash/cb.sh
 
 # Use nano for writing/editing Git commit messages.O
 export GIT_EDITOR=nano
+
+# Java environment settings.
+JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45
+PATH=$JAVA_HOME/bin:$PATH
+
+# Apache Maven environment settings.
+M2_HOME=/usr/local/apache-maven/apache-maven-3.2.1
+M2=$M2_HOME/bin
+MAVEN_OPTS="-Xms256m -Xmx512m"
+PATH=$M2:$PATH
