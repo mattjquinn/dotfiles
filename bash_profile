@@ -12,9 +12,6 @@ alias ssh-xenora="ssh -p8888 oracle@oracle"
 alias ssh-awsnat="ssh ec2-user@vpcnat.openpplsoft.org"
 alias ssh-awsops="ssh opsdev@opshost.openpplsoft.org"
 
-# MQUINN 04-04-2014 : Adding OpenVPN server for use from public Wifi points.
-alias ssh-vpn="ssh admin@10.8.0.1"
-
 # MQUINN 02-20-2014 : tmux only sources .bash_profile; ensure
 # settings in .bashrc are also applied.
 if [ -f ~/.bashrc ]; then
@@ -38,3 +35,6 @@ M2_HOME=/usr/local/apache-maven/apache-maven-3.2.1
 M2=$M2_HOME/bin
 MAVEN_OPTS="-Xms256m -Xmx512m"
 PATH=$M2:$PATH
+
+# OPAM configuration
+. /home/mquinn/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
