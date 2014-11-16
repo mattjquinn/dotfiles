@@ -1,0 +1,17 @@
+(* Added by OPAM. *)
+let () =
+  try Topdirs.dir_directory (Sys.getenv "OCAML_TOPLEVEL_PATH")
+  with Not_found -> ()
+;;
+
+(* MQUINN 11-14-2014 : Adding to make Core module
+   accessible in utop *)
+#use "topfind";;
+#thread;;
+#camlp4o;;
+#require "core.top";;
+#require "core.syntax";;
+
+(* MQUINN 11-15-2014 : Using the same warning-to-error
+   flags used by Real World OCaml (see pg. 90) *)
+#warnings "@A-4-33-41-42-43-34-44";;
