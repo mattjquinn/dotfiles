@@ -27,7 +27,8 @@ source ~/dotfiles/bash/cb.sh
 export GIT_EDITOR=nano
 
 # Java environment settings.
-JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45
+#JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45
+JAVA_HOME=/usr/lib/jvm/jdk1.8.0_25
 PATH=$JAVA_HOME/bin:$PATH
 
 # Apache Maven environment settings.
