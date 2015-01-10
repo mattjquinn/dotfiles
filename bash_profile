@@ -39,3 +39,8 @@ PATH=$M2:$PATH
 
 # OPAM configuration
 . /home/mquinn/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+# MQUINN 12-22-2014 : Adding Ant to classpath.
+ANT_HOME=/opt/apache-ant-1.9.4
+PATH=$ANT_HOME/bin:$PATH
+

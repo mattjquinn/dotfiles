@@ -3,3 +3,6 @@ set autoindent
 set expandtab
 set softtabstop=4
 set shiftwidth=4
+
+" MQUINN 01-10-2015 : Enable syntax highlighting:
+syntax on
