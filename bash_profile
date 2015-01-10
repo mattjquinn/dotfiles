@@ -23,8 +23,8 @@ alias mqlock="xtrlock"
 # Import functions for cb, a wrapper around xclip.
 source ~/dotfiles/bash/cb.sh
 
-# Use nano for writing/editing Git commit messages.O
-export GIT_EDITOR=nano
+# Use vim for writing/editing Git commit messages.
+export GIT_EDITOR=vim
 
 # Java environment settings.
 #JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45
