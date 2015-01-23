@@ -44,3 +44,6 @@ PATH=$M2:$PATH
 ANT_HOME=/opt/apache-ant-1.9.4
 PATH=$ANT_HOME/bin:$PATH
 
+# MQUINN 01-17-2015 : Adding cargo (Rust pkg mgr) to classpath.
+CARGO_HOME=/opt/cargo
+PATH=$CARGO_HOME/bin:$PATH
