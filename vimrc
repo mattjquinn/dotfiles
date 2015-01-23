@@ -1,8 +1,7 @@
 " MQUINN 12-20-2014 : Adding for Python development:
 set autoindent
-set expandtab
-set softtabstop=4
-set shiftwidth=4
+autocmd FileType java setlocal shiftwidth=2 tabstop=2
+autocmd FileType py setlocal shiftwidth=4 tabstop=4
 
 " MQUINN 01-10-2015 : Enable syntax highlighting:
 filetype plugin indent on
@@ -10,3 +9,7 @@ syntax on
 
 " MQUINN 01-22-2015 : Enabling line numbers.
 set number
+
+" MQUINN 01-22-2015 : Highlight unnecessary trailing whitespace.
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
