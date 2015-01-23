@@ -1,5 +1,7 @@
 " MQUINN 12-20-2014 : Adding for Python development:
 set autoindent
+set smartindent
+set expandtab
 autocmd FileType java setlocal shiftwidth=2 tabstop=2
 autocmd FileType py setlocal shiftwidth=4 tabstop=4
 
