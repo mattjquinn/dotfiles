@@ -7,3 +7,6 @@ set shiftwidth=4
 " MQUINN 01-10-2015 : Enable syntax highlighting:
 filetype plugin indent on
 syntax on
+
+" MQUINN 01-22-2015 : Enabling line numbers.
+set number
