@@ -15,3 +15,10 @@ set number
 " MQUINN 01-22-2015 : Highlight unnecessary trailing whitespace.
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+
+" MQUINN 02-24-2015 : Intentionally break the arrow keys
+" to get myself in the habit of using the homerow.
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
