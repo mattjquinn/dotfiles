@@ -45,18 +45,18 @@ if [ "$HDMI1_STATUS" = "connected" ]; then
 	xrandr --addmode HDMI1 "\"$U2312HM_MODEID\""
 
 	# Horizontal orientation.
-	xrandr --output HDMI1 --mode "\"$U2312HM_MODEID\"" --left-of eDP1
-	load_dzen_bar "1920"
+	xrandr --output HDMI1 --mode "\"$U2312HM_MODEID\"" --right-of eDP1
+	load_dzen_bar "1600"
 
-  # Vertical orientation.
+        # Vertical orientation.
 	#xrandr --output HDMI1 --mode "\"$U2312HM_MODEID\"" --rotate left --left-of eDP1
 	#load_dzen_bar "1024"
 
-	echo "[.xinitrc] HDMI1 is connected, placing it to the left of eDP1."
+	echo "[.xinitrc] HDMI1 is connected, placing it to the right of eDP1."
 
-	# Start eDP1 to right of HDMI1.
-	xrandr --output eDP1 --mode "\"$THINKPAD_MODEID\"" --right-of HDMI1
-	load_dzen_bar "1600"
+	# Start eDP1 to left of HDMI1.
+	xrandr --output eDP1 --mode "\"$THINKPAD_MODEID\"" --left-of HDMI1
+	load_dzen_bar "1920"
 else
 
 	# If HDMI1 is disconnected, start eDP1 first (will be leftmost display)
