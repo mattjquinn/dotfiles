@@ -47,3 +47,7 @@ PATH=$ANT_HOME/bin:$PATH
 # MQUINN 01-17-2015 : Adding cargo (Rust pkg mgr) to classpath.
 CARGO_HOME=/opt/cargo
 PATH=$CARGO_HOME/bin:$PATH
+
+# MQUINN 05-28-2015 : Adding ninja build system to path.
+NINJA_HOME=/opt/ninja
+PATH=$NINJA_HOME/:$PATH
