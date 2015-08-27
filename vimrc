@@ -4,6 +4,7 @@ set smartindent
 set expandtab
 autocmd FileType java setlocal shiftwidth=2 tabstop=2
 autocmd FileType py setlocal shiftwidth=4 tabstop=4
+autocmd FileType rs setlocal shiftwidth=2 tabstop=2
 
 " MQUINN 01-10-2015 : Enable syntax highlighting:
 filetype plugin indent on
