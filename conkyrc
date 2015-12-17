@@ -13,9 +13,6 @@ TEXT
 ${execi 3600 /home/mquinn/.dzen/updates_avail.sh -u}\
 ${execi 60 /home/mquinn/.dzen/updates_avail.sh}\
   \
-# Staged Counter
-^fg(\#c45bdc)${execi 60 /home/mquinn/.dzen/review_counter.sh}\
-   \
 # CPU / Mem
 ^fg(\#a4a4a4)\
 ^i(/home/mquinn/.dzen/icons/cpu.xbm) ${cpu}%  \
