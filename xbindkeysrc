@@ -83,7 +83,8 @@
   XF86AudioRaiseVolume
 
 # Mute volume
-"amixer -c 0 set Master mute"
+#"amixer -c 0 set Master mute"
+"amixer -D pulse set Master toggle"
   XF86AudioMute
 
 # Increase brightness.
