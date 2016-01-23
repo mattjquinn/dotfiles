@@ -3,14 +3,8 @@ export CLASSPATH=".:/usr/local/lib/antlr-4.1-complete.jar:$CLASSPATH"
 alias antlr4='java -jar /usr/local/lib/antlr-4.1-complete.jar'
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
-# MQUINN 12-12-2013 : Adding SSH aliases for Xen domUs.
-alias ssh-xen="ssh mquinn@xen"
-alias ssh-xenops="ssh -p4 opsdev@ops"
-alias ssh-xenora="ssh -p8888 oracle@oracle"
-
 # MQUINN 05-25-2014 : Aliases for AWS instances
-alias ssh-awsnat="ssh ec2-user@vpcnat.openpplsoft.org"
-alias ssh-awsops="ssh opsdev@opshost.openpplsoft.org"
+alias ssh-awsnat="ssh ec2-user@54.208.221.151"
 
 # MQUINN 02-20-2014 : tmux only sources .bash_profile; ensure
 # settings in .bashrc are also applied.
