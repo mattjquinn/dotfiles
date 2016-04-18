@@ -11,7 +11,7 @@ TEXT
 # Upgrades Counter
 ^fg(\#f479df)\
 ${execi 3600 /home/mquinn/.dzen/updates_avail.sh -u}\
-${execi 1800 /home/mquinn/.dzen/updates_avail.sh}\
+${execi 60 /home/mquinn/.dzen/updates_avail.sh}\
   \
 # CPU / Mem
 ^fg(\#a4a4a4)\
