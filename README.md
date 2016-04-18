@@ -14,3 +14,9 @@ Here's what my system looks like when I start X; you can see dzen running in the
 right, with data fed to it using conky:
 
 ![alt tag](https://raw.github.com/mquinn/dotfiles/master/images/debian7-dwm.png)
+
+## Notes
+* Use pavucontrol to adjust input/output devices; a recent system update (early 2016)
+  is occasionally causing these to be muted even when the hardware switch indicates their not,
+  and the best solution I've found is to check pavucontrol and uncheck the invariably
+  checked muted button in that interface.
