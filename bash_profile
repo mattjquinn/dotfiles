@@ -38,10 +38,15 @@ PATH=$M2:$PATH
 ANT_HOME=/opt/apache-ant-1.9.4
 PATH=$ANT_HOME/bin:$PATH
 
-# MQUINN 01-17-2015 : Adding cargo (Rust pkg mgr) to classpath.
-CARGO_HOME=/opt/cargo
-PATH=$CARGO_HOME/bin:$PATH
-
 # MQUINN 05-28-2015 : Adding ninja build system to path.
 NINJA_HOME=/opt/ninja
 PATH=$NINJA_HOME/:$PATH
+
+# MQUINN 12-11-2016 : Display calendar events ocurring today and tomorrow.
+# Only show this week and next.
+pal -r 0-2 -c 1
+
+# MQUINN 03-20-2017 : Adding Cargo, Rust, Rustup
+# to PATH.
+PATH=~/.cargo/bin:$PATH
+

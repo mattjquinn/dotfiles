@@ -25,3 +25,8 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+" MQUINN 03-20-2017 : Miscellaneous additions.
+set wildmenu " enable visual autocomplete menu
+             " for Vim commands
+set showmatch " highlight matching [{()}]
