@@ -46,7 +46,14 @@ PATH=$NINJA_HOME/:$PATH
 # Only show this week and next.
 pal -r 0-2 -c 1
 
+# MQUINN 10-06-2017 : Reminder that shell is in vi mode
+# (Esc + K for history, usual keys for navigation).
+echo "REMINDER: shell now in vi mode."
+
 # MQUINN 03-20-2017 : Adding Cargo, Rust, Rustup
 # to PATH.
 PATH=~/.cargo/bin:$PATH
 
+# MQUINN 10-09-2017 : Using vi mode in shell
+# (pg 342 of UNIX and Linux Sys Admin 5th ed).
+set -o vi
