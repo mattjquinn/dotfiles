@@ -57,3 +57,9 @@ PATH=~/.cargo/bin:$PATH
 # MQUINN 10-09-2017 : Using vi mode in shell
 # (pg 342 of UNIX and Linux Sys Admin 5th ed).
 set -o vi
+
+# MQUINN 11-07-2017 : coreutils after/around
+# version 8.28 is adding quotes to the output
+# of `$ ls` for filenames with whitespace in
+# their names; setting this flag to revert.
+export QUOTING_STYLE=literal
