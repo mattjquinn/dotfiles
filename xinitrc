@@ -80,7 +80,7 @@ load_dzen_bar "1600"
 
 # Set background image.
 # can use --bg-scale here.
-feh --bg-max /home/mquinn/dotfiles/bg_photos/Saigon_March032016.jpg
+feh --bg-max /home/mquinn/dotfiles/bg_photos/grenadines.jpg
 
 xbindkeys
 xrdb -merge ~/.Xresources
