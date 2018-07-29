@@ -1,6 +1,6 @@
 # MQUINN 11-22-2013 : Modifying CLASSPATH for ANTLR4.
-export CLASSPATH=".:/usr/local/lib/antlr-4.1-complete.jar:$CLASSPATH"
-alias antlr4='java -jar /usr/local/lib/antlr-4.1-complete.jar'
+export CLASSPATH=".:/opt/antlr/antlr-4.7.1-complete.jar:$CLASSPATH"
+alias antlr4='java -jar /opt/antlr/antlr-4.7.1-complete.jar'
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
 # MQUINN 05-25-2014 : Aliases for AWS instances
