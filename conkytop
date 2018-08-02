@@ -8,11 +8,6 @@ TEXT
 # Backup Notifier
 ^fg(\#eb012c)\
   ${execi 10 /home/mquinn/.dzen/check_for_backup.sh} \
-# Upgrades Counter
-^fg(\#f479df)\
-# MQUINN 10-29-2016: Making update check every 2 hours to save bandwidth.
-${execi 7200 /home/mquinn/.dzen/updates_avail.sh -u}\
-${execi 7260 /home/mquinn/.dzen/updates_avail.sh}\
   \
 # CPU / Mem
 ^fg(\#a4a4a4)\

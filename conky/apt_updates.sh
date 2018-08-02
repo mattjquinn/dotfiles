@@ -7,8 +7,5 @@ if [ "$1" = "-u" ]; then
 else
 	APT_UP_SIM=$(sudo apt-get upgrade -s)
 	UPGRADES_AVAIL=$(echo "$APT_UP_SIM" | sed -n -e 's/^\([0-9]*\)\supgraded.*$/\1/p')
-
-	if [ $UPGRADES_AVAIL != "0" ]; then
-		echo "[$UPGRADES_AVAIL Upgrades]"
-	fi
+	echo "$UPGRADES_AVAIL Available Upgrades"
 fi

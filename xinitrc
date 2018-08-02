@@ -37,7 +37,7 @@ load_dzen_bar () {
 
 	DZENBAR_LEFT_OFFSET=$(expr $DZENBAR_LEFT_OFFSET + $(expr $1 - $DZEN2_WIDTH))
 	#echo "DZENBAR_LEFT_OFFSET: " $DZENBAR_LEFT_OFFSET
-	(sleep 5s && conky | dzen2 -ta r -x $DZENBAR_LEFT_OFFSET -y '0' -e '' -h '20' -w $DZEN2_WIDTH -bg '#222222' -fn $DZEN2_FONT -p) &
+	(sleep 5s && conky -c ~/.conkytop | dzen2 -ta r -x $DZENBAR_LEFT_OFFSET -y '0' -e '' -h '20' -w $DZEN2_WIDTH -bg '#222222' -fn $DZEN2_FONT -p) &
 }
 
 ## If HDMI1 is connected, start it and place it to the left of the internal display.
@@ -76,19 +76,23 @@ load_dzen_bar () {
 
 # MQUINN 05-14-2017: No external monitors, simplifying script.
 xrandr --output eDP1 --mode "\"$THINKPAD_MODEID\""
+
+# STATUS BAR (OLD is Dzen, new is slstatus)
 load_dzen_bar "1600"
+#(slstatus) &
+#(dwmstatus) &
+(conky -c ~/.conkyside) &
 
 # Set background image.
 # can use --bg-scale here.
-feh --bg-max /home/mquinn/dotfiles/bg_photos/grenadines.jpg
+feh --bg-max ~/dotfiles/bg_photos/splitmatrix.jpg
 
 xbindkeys
 xrdb -merge ~/.Xresources
 (redshift) &
 
 while true
-	do
-	sleep 2
-	(exec dwm) &
+  do
+  sleep 2
+  (exec dwm) &
 done
-
