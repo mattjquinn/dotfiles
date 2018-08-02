@@ -42,16 +42,13 @@ own_window_type override
 
 # WIDTH = 500pixel, ${goto 270} for 2 column designs
 # SMALL BAR HEIGHT: 12, LARGE GRAPH HEIGHT: 240
-#
-#
-#
 
 TEXT
 $sysname $kernel ${color1} ${alignr}Load:${color} $loadavg
 ${color1}Aptitude: ${color}${texeci 7200 ~/.conky/apt_updates.sh -u}${texeci 7260 ~/.conky/apt_updates.sh} ${alignr}${color1}Up: ${color} $uptime
 $hr
 
-${color #ffff00}CPU: $cpu% ${freq}MHz, ${color #ff3300}${acpitemp}°C ${goto 270}${color #color1}RAM: $memperc% = $mem / $memmax
+${color #ffff00}CPU: $cpu%       ${freq}MHz ${goto 220}${color #ff3300}${acpitemp}°C ${goto 270}${color #color1}RAM: $memperc% ${alignr}$mem / $memmax
 ${color #88cc00}${cpugraph 60,240 07CC0D FF0000 -t}				${goto 270}${color #88cc00}${memgraph 60,250 07CC0D FF0000 -t}
 ${color}CPU 1: ${color1}${cpu cpu1}% ${goto 130}${cpubar cpu1 12,125}  	${goto 270}${color}CPU 3: ${color1}${cpu cpu3}% ${alignr}${cpubar cpu3 12,125}
 ${color}CPU 2: ${color1}${cpu cpu2}% ${goto 130}${cpubar cpu2 12,125}  	${goto 270}${color}CPU 4: ${color1}${cpu cpu4}% ${alignr}${cpubar cpu4 12,125}
