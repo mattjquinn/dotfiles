@@ -77,10 +77,15 @@ load_dzen_bar () {
 # MQUINN 05-14-2017: No external monitors, simplifying script.
 xrandr --output eDP1 --mode "\"$THINKPAD_MODEID\""
 
-# STATUS BAR (OLD is Dzen, new is slstatus)
+# Status bar
+# Low priority TODO for one day: use slstatus or dwmstatus
+# rather than conky/dzen for the top bar, as the former are compiled
+# and use less resources than the latter.
 load_dzen_bar "1600"
 #(slstatus) &
 #(dwmstatus) &
+
+# Detailed system info display on desktop
 (conky -c ~/.conkyside) &
 
 # Set background image.
