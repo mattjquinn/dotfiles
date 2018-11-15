@@ -63,3 +63,9 @@ set -o vi
 # of `$ ls` for filenames with whitespace in
 # their names; setting this flag to revert.
 export QUOTING_STYLE=literal
+
+# MQUINN 08-12-2018 : Trying to use Python 3 all the time.
+alias python="python3.7"
+
+# MQUINN 08-28-2018: Want to use pip binaries on command
+PATH=$PATH:~/.local/bin
