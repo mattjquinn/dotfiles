@@ -1,4 +1,3 @@
 set tabsize 2
 set tabstospaces
-set const
-
+set constantshow
