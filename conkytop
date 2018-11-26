@@ -39,8 +39,8 @@ ${endif}\
 # Volume
 ^fg(\#a792e0)\
 ^i(/home/mquinn/.dzen/icons/spkr_02.xbm) \
-${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}% ^fg(\#ebac54) \
+${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}% ^fg(\#ebac54)\
 \
 # Date and Time
 ^fg(\#bcbcbc)\
-^i(/home/mquinn/.dzen/icons/shroom.xbm) ${time %b %d} ${time %R %Z} \
+| ${time %b %d} ${time %R %Z} \
