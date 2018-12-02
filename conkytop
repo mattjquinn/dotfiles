@@ -42,5 +42,5 @@ ${endif}\
 ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}% ^fg(\#ebac54)\
 \
 # Date and Time
-^fg(\#bcbcbc)\
-| ${time %b %d} ${time %R %Z} \
+^fg(\#bcbcbc) \
+${time %b %d} ${time %R %Z} \

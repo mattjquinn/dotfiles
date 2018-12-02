@@ -90,7 +90,7 @@ load_dzen_bar "1600"
 
 # Set background image.
 # can use --bg-scale here.
-feh --bg-max ~/dotfiles/bg_photos/splitmatrix.jpg
+feh --bg-fill ~/dotfiles/bg_photos/night_mountains.png
 
 xbindkeys
 xrdb -merge ~/.Xresources

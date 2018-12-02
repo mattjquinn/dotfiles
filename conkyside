@@ -2,7 +2,7 @@
 # https://github.com/brndnmtthws/conky/wiki/User-Configs#4k_simple_system_zfs
 # for use as a detailed sidebar.
 
-alignment top_right
+alignment top_left
 background no
 border_width 1
 color1 07CC0D
