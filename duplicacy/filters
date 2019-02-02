@@ -1,0 +1,24 @@
+# exclude all dotfiles/dotfolders
+-.*/
+
+# exclude big and/or version controlled folders
+-VirtualBox VMs/
+-books/
+-dotfiles/
+-projecteuler/
+-mattjquinn.com/
+-nobackups/
+-movies/
+-coq/
+
+# exclude these file types
+e:(?i)\.(pyc|swp|o|obj|tmp)$
+
+# exclude git repos
+e:\.git/.*$
+
+# exclude Ruby bundles
+e:\.bundle/.*$
+
+# exclude Python cache dirs
+e:\__pycache__/.*$

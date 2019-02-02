@@ -45,7 +45,7 @@ pal -r 0-2 -c 1
 
 # MQUINN 03-20-2017 : Adding Cargo, Rust, Rustup
 # to PATH.
-#PATH=~/.cargo/bin:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # MQUINN 10-09-2017 : Using vi mode in shell
 # (pg 342 of UNIX and Linux Sys Admin 5th ed).
@@ -68,3 +68,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # MQUINN 01-12-2019: Adding terraform to path.
 export PATH=$PATH:/opt/terraform
+
+# MQUINN 02-02-2019: Adding duplicacy to path.
+export PATH=$PATH:"/opt/duplicacy_2.1.2"

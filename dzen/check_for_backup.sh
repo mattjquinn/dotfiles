@@ -1,7 +1,7 @@
 #!/bin/sh
 
-DUPLICITY_CHECK=$(ps -e | grep duplicity)
+DUPLICACY_CHECK=$(ps -e | grep duplicacy)
 
-if [ -n "$DUPLICITY_CHECK" ]; then
+if [ -n "$DUPLICACY_CHECK" ]; then
 	echo "[Backing up...]"
 fi
