@@ -3,6 +3,11 @@
 # Called from user's crontab; DO NOT
 # run as root or you will get permissions errors
 # when duplicacy updates its cache.
+#
+# Reminders
+# - to test filters: duplicacy -d log backup -enum-only
+# - to backup in dry run mode: duplicacy backup -dry-run
+# - to backup w/ progress display: duplicacy backup -stats
 
 logger "[MQUINN] Starting duplicacy wrapper..."
 
