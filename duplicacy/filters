@@ -4,12 +4,15 @@
 # exclude big and/or version controlled folders
 -VirtualBox VMs/
 -books/
+-forward/
+-Downloads/
+-Desktop/
 -dotfiles/
 -projecteuler/
 -mattjquinn.com/
 -nobackups/
+-software/
 -movies/
--coq/
 
 # exclude these file types
 e:(?i)\.(pyc|swp|o|obj|tmp)$

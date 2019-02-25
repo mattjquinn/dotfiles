@@ -71,3 +71,19 @@ export PATH=$PATH:/opt/terraform
 
 # MQUINN 02-02-2019: Adding duplicacy to path.
 export PATH=$PATH:"/opt/duplicacy_2.1.2"
+
+# MQUINN 02-12-2019: Adding CockroachDB to path.
+export PATH=$PATH:"/opt/cockroach-v2.1.4.linux-amd64"
+
+# MQUINN 02-11-2019: Adding gradle to path.
+export PATH=$PATH:"/opt/gradle-5.2.1/bin"
+
+# MQUINN 02-14-2019: Adding Kubernetes-related binaries to path.
+export PATH=$PATH:"/opt/kubernetes"
+
+# MQUINN 02-25-2019: Adding IntelliJ.
+export _JAVA_AWT_WM_NONREPARENTING=1
+alias intellij="sh /opt/intellij_idea-IC-183.5429.30/bin/idea.sh"
+
+printf "cmds: $ fuser\n"
+printf "\n"

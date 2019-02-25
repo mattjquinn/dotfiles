@@ -30,3 +30,10 @@ noremap <Right> <Nop>
 set wildmenu " enable visual autocomplete menu
              " for Vim commands
 set showmatch " highlight matching [{()}]
+
+" MQUINN 02-09-2019 : Adding syntax highlighting for ARM
+au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
+
+" MQUINN 02-25-2019 : Adding merlin for Ocaml
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"

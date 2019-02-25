@@ -15,3 +15,6 @@ let () =
 (* MQUINN 11-15-2014 : Using the same warning-to-error
    flags used by Real World OCaml (see pg. 90) *)
 #warnings "A-4-33-41-42-43-34-44";;
+(* ## added by OPAM user-setup for ocamltop / base ## 3ec62baf6f9c219ae06d9814069da862 ## you can edit, but keep this line *)
+#use "topfind";;
+(* ## end of OPAM user-setup addition for ocamltop / base ## keep this line *)
