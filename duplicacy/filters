@@ -2,6 +2,7 @@
 -.*/
 
 # exclude big and/or version controlled folders
+-IMPORTANT_READING/
 -VirtualBox VMs/
 -books/
 -forward/

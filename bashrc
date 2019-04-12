@@ -111,3 +111,6 @@ fi
 
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# added by travis gem
+[ -f /home/mquinn/.travis/travis.sh ] && source /home/mquinn/.travis/travis.sh

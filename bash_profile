@@ -1,7 +1,7 @@
 # MQUINN 11-22-2013 : Modifying CLASSPATH for ANTLR4.
-#export CLASSPATH=".:/opt/antlr/antlr-4.7.1-complete.jar:$CLASSPATH"
-#alias antlr4='java -jar /opt/antlr/antlr-4.7.1-complete.jar'
-#alias grun='java org.antlr.v4.runtime.misc.TestRig'
+export CLASSPATH=".:/opt/antlr/antlr-4.7.1-complete.jar:$CLASSPATH"
+alias antlr='java -jar /opt/antlr/antlr-4.7.1-complete.jar'
+alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
 # MQUINN 02-20-2014 : tmux only sources .bash_profile; ensure
 # settings in .bashrc are also applied.
@@ -85,5 +85,8 @@ export PATH=$PATH:"/opt/kubernetes"
 export _JAVA_AWT_WM_NONREPARENTING=1
 alias intellij="sh /opt/intellij_idea-IC-183.5429.30/bin/idea.sh"
 
-printf "cmds: $ fuser\n"
+# MQUINN 04-04-2019: Adding mdbook (for generating Rust book documentation).
+export PATH=$PATH:"/opt/mdbook_docgenerator"
+
+printf "cmds: $ {fuser, crash, firejail}\n"
 printf "\n"
