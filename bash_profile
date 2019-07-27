@@ -88,5 +88,8 @@ alias intellij="sh /opt/intellij_idea-IC-183.5429.30/bin/idea.sh"
 # MQUINN 04-04-2019: Adding mdbook (for generating Rust book documentation).
 export PATH=$PATH:"/opt/mdbook_docgenerator"
 
+# MQUINN 07-21-2019: Adding crosstool-ng to path for building cross platform toolchains
+export PATH=$PATH:"/opt/crosstool-ng/bin"
+
 printf "cmds: $ {fuser, crash, firejail}\n"
 printf "\n"
