@@ -91,5 +91,13 @@ export PATH=$PATH:"/opt/mdbook_docgenerator"
 # MQUINN 07-21-2019: Adding crosstool-ng to path for building cross platform toolchains
 export PATH=$PATH:"/opt/crosstool-ng/bin"
 
+# MQUINN 07-27-2019: Add Processing (light patterns)
+export PATH=$PATH:"/opt/processing-3.5.3"
+
+# MQUINN 08-12-2019: Increase bash history + store history immediately
+HISTSIZE=1000000
+HISTFILESIZE=1000000
+PROMPT_COMMAND='history -a'
+
 printf "cmds: $ {fuser, crash, firejail}\n"
 printf "\n"
