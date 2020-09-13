@@ -1,49 +1,52 @@
-# MQUINN 08-02-2018: Adapted from
-# https://github.com/brndnmtthws/conky/wiki/User-Configs#4k_simple_system_zfs
-# for use as a detailed sidebar.
+conky.config = {
+-- MQUINN 08-02-2018: Adapted from
+-- https://github.com/brndnmtthws/conky/wiki/User-Configs#4k_simple_system_zfs
+-- for use as a detailed sidebar.
 
-alignment top_left
-background no
-border_width 1
-color1 07CC0D
-color2 D1E7D1
-color3 FF0000
-color4 FFFFFF
-cpu_avg_samples 2
-default_color D1E7D1
-default_outline_color white
-default_shade_color white
-double_buffer yes
-draw_borders no
-draw_graph_borders yes
-draw_outline no
-draw_shades no
-gap_x 5
-gap_y 40
-border_outer_margin 20
-max_port_monitor_connections 64
-maximum_width 500
-minimum_width 500
-minimum_size 330 10
-net_avg_samples 2
-no_buffers yes
-out_to_console no
-stippled_borders 2
-update_interval 2
-uppercase no
-use_spacer left
-use_xft yes
-xftalpha 0.8
-xftfont  Bitstream Vera Sans Mono:size=9
+	alignment = 'top_left',
+	background = false,
+	border_width = 1,
+	color1 = '#07CC0D',
+	color2 = '#D1E7D1',
+	color3 = '#FF0000',
+	color4 = '#FFFFFF',
+	cpu_avg_samples = 2,
+	default_color = '#D1E7D1',
+	default_outline_color = 'white',
+	default_shade_color = 'white',
+	double_buffer = true,
+	draw_borders = false,
+	draw_graph_borders = true,
+	draw_outline = false,
+	draw_shades = false,
+	gap_x = 5,
+	gap_y = 40,
+	border_outer_margin = 20,
+	max_port_monitor_connections = 64,
+	maximum_width = 500,
+	minimum_width = '500',
+	minimum_width = 330, minimum_height = 10,
+	net_avg_samples = 2,
+	no_buffers = true,
+	out_to_console = false,
+	stippled_borders = 2,
+	update_interval = 2,
+	uppercase = false,
+	use_spacer = 'left',
+	use_xft = true,
+	xftalpha = 0.8,
+	font = 'Bitstream Vera Sans Mono:size=9',
 
-own_window yes
-own_window_colour black
-own_window_type override
+	own_window = true,
+	own_window_colour = 'black',
+	own_window_type = 'override',
 
-# WIDTH = 500pixel, ${goto 270} for 2 column designs
-# SMALL BAR HEIGHT: 12, LARGE GRAPH HEIGHT: 240
+-- WIDTH = 500pixel, ${goto 270} for 2 column designs
+-- SMALL BAR HEIGHT: 12, LARGE GRAPH HEIGHT: 240
 
-TEXT
+};
+
+conky.text = [[
 $sysname $kernel ${color1} ${alignr}Load:${color} $loadavg
 ${color1}Aptitude: ${color}${texeci 7200 ~/.conky/apt_updates.sh -u}${texeci 7260 ~/.conky/apt_updates.sh} ${alignr}${color1}Up: ${color} $uptime
 $hr
@@ -88,3 +91,4 @@ ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 
 ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
 ${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
 ${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}
+]];

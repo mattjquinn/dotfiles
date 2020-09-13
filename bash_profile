@@ -45,8 +45,6 @@ pal -r 0-2 -c 1
 
 # MQUINN 03-20-2017 : Adding Cargo, Rust, Rustup
 # to PATH.
-export PATH="$HOME/.cargo/bin:$PATH"
-
 # MQUINN 10-09-2017 : Using vi mode in shell
 # (pg 342 of UNIX and Linux Sys Admin 5th ed).
 set -o vi
@@ -58,7 +56,7 @@ set -o vi
 export QUOTING_STYLE=literal
 
 # MQUINN 08-12-2018 : Trying to use Python 3 all the time.
-alias python="python3.7"
+#alias python="python3.7"
 
 # MQUINN 08-28-2018: Want to use pip binaries on command
 PATH=$PATH:~/.local/bin
@@ -83,7 +81,7 @@ export PATH=$PATH:"/opt/kubernetes"
 
 # MQUINN 02-25-2019: Adding IntelliJ.
 export _JAVA_AWT_WM_NONREPARENTING=1
-alias intellij="sh /opt/intellij_idea-IC-183.5429.30/bin/idea.sh"
+alias intellij="sh /opt/intellij/bin/idea.sh"
 
 # MQUINN 04-04-2019: Adding mdbook (for generating Rust book documentation).
 export PATH=$PATH:"/opt/mdbook_docgenerator"
@@ -99,5 +97,9 @@ HISTSIZE=1000000
 HISTFILESIZE=1000000
 PROMPT_COMMAND='history -a'
 
-printf "cmds: $ {fuser, crash, firejail}\n"
+printf "cmds: $ {atop, fuser, crash, firejail, rlwrap, i7z, strace}\n"
 printf "\n"
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+alias gs="git status"
