@@ -65,19 +65,19 @@ PATH=$PATH:~/.local/bin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # MQUINN 01-12-2019: Adding terraform to path.
-export PATH=$PATH:/opt/terraform
+#export PATH=$PATH:/opt/terraform
 
 # MQUINN 02-02-2019: Adding duplicacy to path.
 export PATH=$PATH:"/opt/duplicacy_2.1.2"
 
 # MQUINN 02-12-2019: Adding CockroachDB to path.
-export PATH=$PATH:"/opt/cockroach-v2.1.4.linux-amd64"
+#export PATH=$PATH:"/opt/cockroach-v2.1.4.linux-amd64"
 
 # MQUINN 02-11-2019: Adding gradle to path.
 export PATH=$PATH:"/opt/gradle-5.2.1/bin"
 
 # MQUINN 02-14-2019: Adding Kubernetes-related binaries to path.
-export PATH=$PATH:"/opt/kubernetes"
+#export PATH=$PATH:"/opt/kubernetes"
 
 # MQUINN 02-25-2019: Adding IntelliJ.
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -103,3 +103,31 @@ printf "\n"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 alias gs="git status"
+
+# 12-25-2020: Add NVM for NPM/nodejs environments
+# (note: first line chooses a default for NVM so that it doesn't
+# check everywhere for which to use because the check delays shell load time).
+export PATH=~/.nvm/versions/node/v15.5.0/bin:$PATH
+export NVM_DIR=~/.nvm
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh" --no-use
+
+alias python="python3"
+
+# MQUINN 04-20-2021: Replacing `sudo service openvpn start` with
+# this command, which gives greater flexibility and more importantly
+# works more reliably, esp with regard to not having DNS rules changed
+# permanently until next reboot after killing the VPN process.
+piavpn(){
+  if [ "$#" -ne 1 ]
+  then
+    echo "Usage: piavpn <location> for a valid PIA site."
+    return 1
+  fi
+  location=$1
+  wd=/etc/openvpn/pia
+  # OVPN filename is quoted because it may contain spaces.
+  sudo openvpn --config $wd/pia-location-configs-oct-2020/"$1.ovpn" \
+          --verb 4 \
+          --auth-user-pass $wd/acct_credentials.txt
+}
+
