@@ -118,15 +118,17 @@ alias python="python3"
 # works more reliably, esp with regard to not having DNS rules changed
 # permanently until next reboot after killing the VPN process.
 piavpn(){
+  wd=/etc/openvpn/pia
+  pia_locations="$wd/pia-location-configs-oct-2020"
   if [ "$#" -ne 1 ]
   then
+    ls $pia_locations
     echo "Usage: piavpn <location> for a valid PIA site."
     return 1
   fi
   location=$1
-  wd=/etc/openvpn/pia
   # OVPN filename is quoted because it may contain spaces.
-  sudo openvpn --config $wd/pia-location-configs-oct-2020/"$1.ovpn" \
+  sudo openvpn --config $pia_locations/"$1.ovpn" \
           --verb 4 \
           --auth-user-pass $wd/acct_credentials.txt
 }
